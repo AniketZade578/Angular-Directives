@@ -1,0 +1,31 @@
+<div *ngFor="let course of courses">
+
+    <div [style.color]="'red'" [ngClass]="clsObj">{{course}} here I used ngClass.</div>
+
+    <div [style.background-color]="'yellow'">{{course}}</div>
+
+    <div [ngStyle]="{'background-color':'grey','color':'red'}">{{course}}</div>
+
+    <div>{{course}} is the best to you!!!</div>
+
+    <div *ngNonBindable>{{course}} is the best to you!!!</div>
+    
+    
+</div>
+
+<div [style.color]="clr" [style.font-size.px]="sz">This is ngStyle (dynamically)</div>
+
+<table>
+    <thead>
+        <tr>
+            <td class="Love">First Name</td>
+            <td>Last Name</td>
+            <td>Score</td>
+        </tr>
+    </thead>
+    <tr *ngFor="let student of students">
+        <td>{{student.first}}</td>
+        <td>{{student.last}}</td>
+        <td>{{student.score}}</td>
+    </tr>
+</table> 
